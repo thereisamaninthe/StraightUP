@@ -2,6 +2,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Camera permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Sensor permissions -->
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+
+    <!-- Vibration for reminders -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- System alert window for overlay reminders -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Required camera features -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,7 +41,8 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.StraightUP">
+            android:theme="@style/Theme.StraightUP"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

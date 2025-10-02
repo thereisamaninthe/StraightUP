@@ -49,7 +49,33 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    testImplementation(libs.junit)
+
+    // Camera and Vision AI
+    implementation("androidx.camera:camera-core:1.3.4")
+    implementation("androidx.camera:camera-camera2:1.3.4")
+    implementation("androidx.camera:camera-lifecycle:1.3.4")
+    implementation("androidx.camera:camera-view:1.3.4")
+    implementation("androidx.camera:camera-extensions:1.3.4")
+
+    // ML Kit for face detection
+    implementation("com.google.mlkit:face-detection:16.1.5")
+
+    // Permissions
+    implementation("com.google.accompanist:accompanist-permissions:0.32.0")
+
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+
+    // DataStore for preferences
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    testImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
